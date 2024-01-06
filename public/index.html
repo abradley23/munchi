@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Swiping Social App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="tabs">
+      <button onclick="showTab('profile')">Profiles</button>
+      <button onclick="showTab('restaurant')">Restaurants</button>
+    </div>
+
+    <div class="tab-content" id="profileTab">
+      <div class="card" id="card">
+        <img src="profile1.jpg" alt="Profile Image" class="profile-image">
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      
+        <div class="buttons">
+          <button onclick="handleDislike()">Dislike</button>
+          <button onclick="handleLike()">Like</button>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="tab-content" id="restaurantTab" style="display:none;">
+      <div class="card" id="card">
+        <img src="restaurant1.jpg" alt="Restaurant Profile Image" class="rest-profile-image">
+        <h2 class="restaurant-name">Eat at Joes</h2>
+        <p class="restaurant-bio">Food food food food.</p>
+
+        <div class="buttons">
+          <button onclick="handleDislike()">Dislike</button>
+          <button onclick="handleLike()">Like</button>
+          <button onclick="handleMeet()">Meet</button>
+        </div>
+      </div>
+    </div>
+  <script src="app.js"></script>  
+</html>
